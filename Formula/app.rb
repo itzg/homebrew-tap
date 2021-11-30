@@ -1,9 +1,9 @@
 class App < Formula
   desc "Prunes local git branches without remote branch"
   homepage "https://github.com/itzg/prune-branches"
-  url "https://github.com/itzg/prune-branches/releases/download/v1.2.3/prune-branches-1.2.3.zip"
-  version "1.2.3"
-  sha256 "81a690fc82340b8215f2ccb3b96296442452f9507aa0810a0cb9fa6836f8c85c"
+  url "https://github.com/itzg/prune-branches/releases/download/v1.2.4/prune-branches-1.2.4.zip"
+  version "1.2.4"
+  sha256 "ed1a2cd34f6b750cc9cb55e023cc5fb613963cad310ecb8e0b9357d5aae599fe"
   license "MIT"
 
   depends_on "openjdk@17"
@@ -15,6 +15,6 @@ class App < Formula
 
   test do
     output = shell_output("#{bin}/app --version")
-    assert_match "1.2.3", output
+    assert_match "1.2.4", output
   end
 end
