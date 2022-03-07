@@ -1,9 +1,9 @@
 class McImageHelper < Formula
   desc "mc-image-helper"
   homepage "https://github.com/itzg/mc-image-helper"
-  url "https://github.com/itzg/mc-image-helper/releases/download/v1.16.9/mc-image-helper-1.16.9.zip"
-  version "1.16.9"
-  sha256 "76e7e577d613195299fef1861894c110ec1f231c7fd9785ff13199a7c4648f66"
+  url "https://github.com/itzg/mc-image-helper/releases/download/v1.16.10/mc-image-helper-1.16.10.zip"
+  version "1.16.10"
+  sha256 "49c1ebb668c1a5912ed89f7a9f27dc28d0a710ca066b57ea1123072dfc6630b3"
   license "MIT"
 
   depends_on "openjdk@8"
@@ -15,6 +15,6 @@ class McImageHelper < Formula
 
   test do
     output = shell_output("#{bin}/mc-image-helper --version")
-    assert_match "1.16.9", output
+    assert_match "1.16.10", output
   end
 end
