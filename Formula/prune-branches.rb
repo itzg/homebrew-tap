@@ -2,8 +2,8 @@
 class PruneBranches < Formula
   desc "Prunes local git branches without remote branch"
   homepage "https://github.com/itzg/prune-branches"
-  url "https://github.com/itzg/prune-branches/releases/download/1.3.2/prune-branches-1.3.2.tgz"
-  sha256 "33ff1da344a69f38c17f04bc367421c38786de898bea51200b2d62be8d31f9e5"
+  url "https://github.com/itzg/prune-branches/releases/download/1.3.3/prune-branches-1.3.3.tgz"
+  sha256 "a2f9fbded19047ad71cec0a6d14723e088e9e7974eded2bc0531942fee0ecea2"
   license "MIT"
 
   depends_on "java"
