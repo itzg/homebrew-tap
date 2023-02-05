@@ -1,8 +1,8 @@
 class McImageHelper < Formula
   desc "This tool does the complicated bits for itzg/minecraft-server"
   homepage "https://github.com/itzg/mc-image-helper"
-  url "https://github.com/itzg/mc-image-helper/releases/download/1.25.1/mc-image-helper-1.25.1.tgz"
-  sha256 "450bcdc5e1e30be700c92731b7705e0e14490e0afa111955ed487e515c29dc0a"
+  url "https://github.com/itzg/mc-image-helper/releases/download/1.25.2/mc-image-helper-1.25.2.tgz"
+  sha256 "f0eb0a2cf4b7140ca1decd067d95dcb5b636c54b348d171e38e785abf0e355af"
   license "MIT"
 
   depends_on "java"
