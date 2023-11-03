@@ -5,21 +5,21 @@
 class McMonitor < Formula
   desc "Command/agent to monitor the status of Minecraft servers"
   homepage ""
-  version "0.12.4"
+  version "0.12.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.4/mc-monitor_0.12.4_darwin_amd64.tar.gz"
-      sha256 "50e2824bdd471c7bd5e79e0b0475f4d49e2f033c7239da99abcea35712fe3015"
+    if Hardware::CPU.arm?
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_darwin_arm64.tar.gz"
+      sha256 "f7b95e2865d5cc680330bdb1501477d41699e9cc71e70dbeef8b7a8b8d59029c"
 
       def install
         bin.install "mc-monitor"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.4/mc-monitor_0.12.4_darwin_arm64.tar.gz"
-      sha256 "bda0f4bc4dd84caeac7f2bb564a4cc9a25ab59e1df1f99a5c157f006b8ee9e57"
+    if Hardware::CPU.intel?
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_darwin_amd64.tar.gz"
+      sha256 "28ffc87e90bb21cc6bab48176a16ea86f8c543aafddebfe45e0d3a25fc7119f0"
 
       def install
         bin.install "mc-monitor"
@@ -28,17 +28,17 @@ class McMonitor < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.4/mc-monitor_0.12.4_linux_amd64.tar.gz"
-      sha256 "e04144a92f5c6f5c6b6c05cc945da51c75ec2b65162c251d73be70c9fbaf7fe4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_linux_arm64.tar.gz"
+      sha256 "fd438173fefbee1fc24a151d111035749d53f43beed38c95df8d628236868096"
 
       def install
         bin.install "mc-monitor"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.4/mc-monitor_0.12.4_linux_arm64.tar.gz"
-      sha256 "55aa36cddbe494f52a6949de21da615aacca1db51b75276bf4303a060ae7d595"
+    if Hardware::CPU.intel?
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_linux_amd64.tar.gz"
+      sha256 "8f9b3f94ae5911fa5f7a5f0cc1fa301afde3d6cb176b76aeea876dbb746f1bf2"
 
       def install
         bin.install "mc-monitor"
