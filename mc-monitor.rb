@@ -5,21 +5,21 @@
 class McMonitor < Formula
   desc "Command/agent to monitor the status of Minecraft servers"
   homepage ""
-  version "0.12.5"
+  version "0.12.6"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_darwin_arm64.tar.gz"
-      sha256 "f7b95e2865d5cc680330bdb1501477d41699e9cc71e70dbeef8b7a8b8d59029c"
+    if Hardware::CPU.intel?
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.6/mc-monitor_0.12.6_darwin_amd64.tar.gz"
+      sha256 "717b863cb3e46601e5da89b0255d1304ca1bfc765d4dff4bf6e434cf4571b5bf"
 
       def install
         bin.install "mc-monitor"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_darwin_amd64.tar.gz"
-      sha256 "28ffc87e90bb21cc6bab48176a16ea86f8c543aafddebfe45e0d3a25fc7119f0"
+    if Hardware::CPU.arm?
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.6/mc-monitor_0.12.6_darwin_arm64.tar.gz"
+      sha256 "e4d157648f7af5ce23a0011ce000112e38c6e6f79ee1c03c9fba93b5ca26702a"
 
       def install
         bin.install "mc-monitor"
@@ -29,16 +29,16 @@ class McMonitor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_linux_arm64.tar.gz"
-      sha256 "fd438173fefbee1fc24a151d111035749d53f43beed38c95df8d628236868096"
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.6/mc-monitor_0.12.6_linux_arm64.tar.gz"
+      sha256 "e5b2e7aaf00acaec1cd73191a221fd2852cd4a7be3148d22cde7fb42eef3f950"
 
       def install
         bin.install "mc-monitor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.5/mc-monitor_0.12.5_linux_amd64.tar.gz"
-      sha256 "8f9b3f94ae5911fa5f7a5f0cc1fa301afde3d6cb176b76aeea876dbb746f1bf2"
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.6/mc-monitor_0.12.6_linux_amd64.tar.gz"
+      sha256 "46c0f44831650c2c42a8daef75a82f95e6f24787454c3a7cfaac2909e7ec45b4"
 
       def install
         bin.install "mc-monitor"
