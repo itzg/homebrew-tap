@@ -5,21 +5,21 @@
 class McMonitor < Formula
   desc "Command/agent to monitor the status of Minecraft servers"
   homepage ""
-  version "0.12.12"
+  version "0.12.13"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.12/mc-monitor_0.12.12_darwin_amd64.tar.gz"
-      sha256 "dc42c87b194243455c27a610694649315cddd8fa4a2c17810324a2ec01ca1d2e"
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.13/mc-monitor_0.12.13_darwin_amd64.tar.gz"
+      sha256 "f77734bac407a1fccff6273198da9608bbe041d99daf7907992e8c5e072d9f30"
 
       def install
         bin.install "mc-monitor"
       end
     end
     on_arm do
-      url "https://github.com/itzg/mc-monitor/releases/download/0.12.12/mc-monitor_0.12.12_darwin_arm64.tar.gz"
-      sha256 "e42fec56409ef697e85cc0bfb0a691c0437b1bf2f46d2e9a52a5a7fb1f3d81b7"
+      url "https://github.com/itzg/mc-monitor/releases/download/0.12.13/mc-monitor_0.12.13_darwin_arm64.tar.gz"
+      sha256 "26bcfeda634dc948d6a7283bfb534cfc54abedb077a3af4dabfb5326ccd913ae"
 
       def install
         bin.install "mc-monitor"
@@ -30,8 +30,8 @@ class McMonitor < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/itzg/mc-monitor/releases/download/0.12.12/mc-monitor_0.12.12_linux_amd64.tar.gz"
-        sha256 "6e468d05f7e5cb90df739e34f854299573d651c3aa688b9ee2fe71966e031417"
+        url "https://github.com/itzg/mc-monitor/releases/download/0.12.13/mc-monitor_0.12.13_linux_amd64.tar.gz"
+        sha256 "3df169c7fa37a5d4e839f10f540a6ea052f58056d93279c72551e72882ee55d4"
 
         def install
           bin.install "mc-monitor"
@@ -40,8 +40,8 @@ class McMonitor < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/itzg/mc-monitor/releases/download/0.12.12/mc-monitor_0.12.12_linux_arm64.tar.gz"
-        sha256 "fee3b45d2696c7ab9f3b14cda57e8a3b6575b5fcbfbdfa7200bf79aba017054e"
+        url "https://github.com/itzg/mc-monitor/releases/download/0.12.13/mc-monitor_0.12.13_linux_arm64.tar.gz"
+        sha256 "83137b74e118a919f56e3fb3423cf5a4cf4eb0b68c1b5ddd04e4d36af87b18cb"
 
         def install
           bin.install "mc-monitor"
