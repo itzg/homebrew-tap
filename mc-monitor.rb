@@ -5,21 +5,21 @@
 class McMonitor < Formula
   desc "Command/agent to monitor the status of Minecraft servers"
   homepage ""
-  version "0.15.3"
+  version "0.15.4"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/itzg/mc-monitor/releases/download/0.15.3/mc-monitor_0.15.3_darwin_amd64.tar.gz"
-      sha256 "67f88a4470cdae4555ddc5abd29e4d5bc408b6d668d9ec28bb9a3eb921a28cfe"
+      url "https://github.com/itzg/mc-monitor/releases/download/0.15.4/mc-monitor_0.15.4_darwin_amd64.tar.gz"
+      sha256 "e2da3b200b1290aab30055b534cb3fec034aa0264dcf6bc575ecc40126672f36"
 
       def install
         bin.install "mc-monitor"
       end
     end
     on_arm do
-      url "https://github.com/itzg/mc-monitor/releases/download/0.15.3/mc-monitor_0.15.3_darwin_arm64.tar.gz"
-      sha256 "972f880d7573554fa8ed455bee82d3d287e7a100ab11942e678734439e039fd8"
+      url "https://github.com/itzg/mc-monitor/releases/download/0.15.4/mc-monitor_0.15.4_darwin_arm64.tar.gz"
+      sha256 "30a4ec3756da152bcd7634dbc34e00ae99aa58a770bdbf214122804f148dba9e"
 
       def install
         bin.install "mc-monitor"
@@ -30,8 +30,8 @@ class McMonitor < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/itzg/mc-monitor/releases/download/0.15.3/mc-monitor_0.15.3_linux_amd64.tar.gz"
-        sha256 "d19fe8432aab61f32dd680538c157e9324c8135d9c21879eb2e85958f6cfeed2"
+        url "https://github.com/itzg/mc-monitor/releases/download/0.15.4/mc-monitor_0.15.4_linux_amd64.tar.gz"
+        sha256 "33eeda1c444ff0ae97cf8c2b4eaec1088deddce63607344a783b25489e5dddbd"
 
         def install
           bin.install "mc-monitor"
@@ -40,8 +40,8 @@ class McMonitor < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/itzg/mc-monitor/releases/download/0.15.3/mc-monitor_0.15.3_linux_arm64.tar.gz"
-        sha256 "db2e109b2515d566e8cb49769092dc362fa740edfa9e80c07a2fd4a534f7e5aa"
+        url "https://github.com/itzg/mc-monitor/releases/download/0.15.4/mc-monitor_0.15.4_linux_arm64.tar.gz"
+        sha256 "33a7e057b7a719ff4871df580bd38eaa0ded82188407b024c2854d1df944288e"
 
         def install
           bin.install "mc-monitor"
