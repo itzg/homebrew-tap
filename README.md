@@ -39,7 +39,7 @@ Invoke the following command if the cask is *not* hosted at GitHub
 
 ```sh
 brew tap itzg/homebrew-tap 
-brew install --cask <formula>
+brew install --cask <cask>
 ```
 
 If you get a dialog stating the cask is broken try installing with `--no-quarantine`.
