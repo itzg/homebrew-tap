@@ -1,6 +1,6 @@
 class FileTreeAsJson < Formula
-  desc ""
-  homepage ""
+  desc "Capture a directory tree as JSON"
+  homepage "https://github.com/itzg/file-tree-as-json"
   url "https://github.com/itzg/file-tree-as-json/releases/download/1.0.2/file-tree-as-json-1.0.2.tar"
   sha256 "69c5309998fa7f5c7675e4459b21a8b5860cd15beea05f0c92721c020c05eb77"
   license ""
@@ -10,5 +10,13 @@ class FileTreeAsJson < Formula
   def install
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/file-tree-as-json"
+  end
+
+  test do
+    require "json"
+
+    (testpath/"example.txt").write("example")
+    output = JSON.parse(shell_output("#{bin}/file-tree-as-json ."))
+    assert_equal "example.txt", output.fetch(".").fetch("children").first.fetch("path")
   end
 end

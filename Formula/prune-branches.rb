@@ -11,4 +11,13 @@ class PruneBranches < Formula
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/prune-branches"
   end
+
+  test do
+    system "git", "init"
+    system "git", "-c", "user.name=Homebrew", "-c", "user.email=brew@example.com",
+           "commit", "--allow-empty", "-m", "Initial commit"
+    system "git", "branch", "obsolete"
+    assert_match "DRY RUN: DELETED obsolete", shell_output("#{bin}/prune-branches --dry-run")
+    assert_match "obsolete", shell_output("git branch --list obsolete")
+  end
 end

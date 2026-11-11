@@ -11,4 +11,8 @@ class McImageHelper < Formula
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/mc-image-helper"
   end
+
+  test do
+    assert_equal "098f6bcd4621d373cade4e832627b4f6", shell_output("printf test | #{bin}/mc-image-helper hash").strip
+  end
 end
