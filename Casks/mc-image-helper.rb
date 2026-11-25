@@ -1,13 +1,13 @@
 cask "mc-image-helper" do
-  version "1.78.3"
-  sha256 "b9d09d9e928e2e047b0a8ef6286f3b03d78570088308378a82c4309d29f6d6da"
+  version "1.79.0"
+  sha256 "96c94de837bce66c20de3e137512505f6badf8a711dcc092a118e0f29bbab0ce"
 
-  url "https://github.com/itzg/mc-image-helper/releases/download/1.78.3/mc-image-helper-1.78.3.tgz"
+  url "https://github.com/itzg/mc-image-helper/releases/download/1.79.0/mc-image-helper-1.79.0.tgz"
   name "mc-image-helper"
   desc "This tool does the complicated bits for itzg/minecraft-server"
   homepage "https://github.com/itzg/mc-image-helper"
 
   depends_on formula: "java"
 
-  binary "mc-image-helper-1.78.3/bin/mc-image-helper"
+  binary "mc-image-helper-1.79.0/bin/mc-image-helper"
 end
